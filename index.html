@@ -3,83 +3,332 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="QuizPeek Privacy Policy">
   <title>QuizPeek Privacy Policy</title>
+
   <style>
-    body {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-      font: 16px/1.7 Arial, sans-serif;
-      color: #172033;
+    :root {
+      --bg: #f6f7fb;
+      --card: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --line: #e4e7ec;
+      --accent: #5b4df5;
     }
-    h1, h2 {
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.7 Arial, sans-serif;
+    }
+
+    main {
+      max-width: 860px;
+      margin: 40px auto;
+      padding: 32px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 32px;
       color: #111827;
+    }
+
+    h2 {
+      margin-top: 30px;
+      margin-bottom: 10px;
+      font-size: 20px;
+      color: #111827;
+    }
+
+    p {
+      margin: 8px 0 14px;
+    }
+
+    ul {
+      margin-top: 8px;
+      padding-left: 24px;
+    }
+
+    li {
+      margin: 6px 0;
+    }
+
+    .updated {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .note {
+      padding: 14px 16px;
+      margin: 18px 0;
+      background: #f1f0ff;
+      border-left: 4px solid var(--accent);
+      border-radius: 8px;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        margin: 0;
+        padding: 22px 18px;
+        border-radius: 0;
+        border: 0;
+      }
+
+      h1 {
+        font-size: 27px;
+      }
+
+      h2 {
+        font-size: 18px;
+      }
     }
   </style>
 </head>
+
 <body>
-  <h1>QuizPeek Privacy Policy</h1>
-  <p>Last updated: September 2026</p>
+  <main>
+    <h1>QuizPeek Privacy Policy</h1>
+    <p class="updated">Last updated: September 2026</p>
 
-  <h2>1. What QuizPeek does</h2>
-  <p>
-    QuizPeek is a browser extension that captures the visible browser tab
-    when the user uses the quiz-answer feature and sends the image for AI analysis.
-  </p>
+    <div class="note">
+      QuizPeek is designed to process only the information necessary
+      to provide its login, quiz-answering, account, and usage features.
+      QuizPeek does not sell user data or use it for advertising.
+    </div>
 
-  <h2>2. Information processed</h2>
-  <p>
-    QuizPeek may process screenshots of the visible browser tab selected by the user.
-    The screenshot may contain text, images, or other content visible on that tab.
-  </p>
+    <h2>1. About QuizPeek</h2>
+    <p>
+      QuizPeek is a browser extension that can capture the visible browser
+      tab when the user activates the quiz-answer feature. The captured
+      image is processed by QuizPeek's backend and may be sent to Google
+      Gemini to generate a concise answer.
+    </p>
 
-  <h2>3. How information is used</h2>
-  <p>
-    Screenshots are used only to analyze quiz content and return an answer to the user.
-    QuizPeek does not use screenshots for advertising, profiling, or unrelated purposes.
-  </p>
+    <h2>2. Information we process</h2>
 
-  <h2>4. Third-party processing</h2>
-  <p>
-    QuizPeek sends screenshot data to its backend service for processing.
-    The backend may send the screenshot to Google Gemini to generate the requested answer.
-  </p>
+    <p><strong>Google account information</strong></p>
+    <ul>
+      <li>Google account identifier (Google subject ID)</li>
+      <li>Email address</li>
+      <li>Name</li>
+      <li>Profile picture</li>
+    </ul>
 
-  <h2>5. Data sharing</h2>
-  <p>
-    QuizPeek does not sell user data.
-    QuizPeek does not share user data with third parties for advertising or unrelated purposes.
-  </p>
+    <p>
+      This information is obtained from Google when the user signs in
+      with Google and is used to create and manage the QuizPeek account.
+    </p>
 
-  <h2>6. Browsing activity</h2>
-  <p>
-    QuizPeek does not collect or store the user's browsing history.
-    The extension accesses page content only as required for its features.
-  </p>
+    <p><strong>Authentication information</strong></p>
+    <ul>
+      <li>Google authentication token used during the login process</li>
+      <li>QuizPeek authentication token (JWT)</li>
+    </ul>
 
-  <h2>7. Local storage</h2>
-  <p>
-    QuizPeek may store extension settings such as the enabled state and
-    Auto Wayground state in the browser's local extension storage.
-  </p>
+    <p>
+      Authentication information is used only to authenticate the user,
+      maintain the signed-in session, and authorize requests to QuizPeek.
+      Authentication tokens used by the extension are stored in the
+      browser's local extension storage.
+    </p>
 
-  <h2>8. Data retention</h2>
-  <p>
-    QuizPeek does not intend to retain screenshots longer than necessary
-    to provide the requested AI functionality.
-  </p>
+    <p><strong>User-submitted screenshots</strong></p>
+    <p>
+      When the user requests an answer, QuizPeek may capture the visible
+      browser tab. The screenshot may contain text, images, quiz questions,
+      answer choices, or other information visible on the screen.
+    </p>
 
-  <h2>9. Security</h2>
-  <p>
-    Reasonable technical measures are used to protect data processed by QuizPeek.
-    However, no internet transmission or storage system can be guaranteed
-    to be completely secure.
-  </p>
+    <p><strong>Account and usage information</strong></p>
+    <ul>
+      <li>Account status and role</li>
+      <li>Plan information</li>
+      <li>Credits and credit transactions</li>
+      <li>AI request count</li>
+      <li>Input and output token usage</li>
+      <li>AI model used</li>
+      <li>Returned answer</li>
+      <li>Request timestamps</li>
+    </ul>
 
-  <h2>10. Contact</h2>
-  <p>
-    For privacy questions or requests, contact the QuizPeek developer through
-    the support contact provided on the Chrome Web Store listing.
-  </p>
+    <h2>3. How we use information</h2>
+    <p>QuizPeek uses processed information for the following purposes:</p>
+    <ul>
+      <li>Authenticate users with Google</li>
+      <li>Create and manage QuizPeek accounts</li>
+      <li>Process quiz screenshots and generate answers</li>
+      <li>Track credits and plan usage</li>
+      <li>Provide account and usage information to the user</li>
+      <li>Monitor service usage and prevent abuse</li>
+      <li>Maintain and secure the QuizPeek service</li>
+    </ul>
+
+    <h2>4. How screenshots are processed</h2>
+    <p>
+      When a user requests an AI answer, the screenshot is sent from the
+      QuizPeek extension to the QuizPeek backend over HTTPS.
+    </p>
+
+    <p>
+      The backend may send the screenshot to Google Gemini for AI analysis.
+      The screenshot is used to generate the requested quiz answer.
+    </p>
+
+    <p>
+      QuizPeek does not store screenshots in its database as persistent
+      user records. Screenshots are processed temporarily during the
+      request and are not intentionally retained as permanent files.
+    </p>
+
+    <p>
+      QuizPeek may temporarily keep the generated answer in server memory
+      for a short period to reduce duplicate AI requests. This temporary
+      cache contains the generated answer, not the original screenshot.
+    </p>
+
+    <h2>5. Data storage</h2>
+    <p>
+      QuizPeek stores account and service information in its backend
+      database. This may include Google account identifiers, email,
+      profile information, plan, credits, credit transactions, usage
+      statistics, and generated answers.
+    </p>
+
+    <p>
+      QuizPeek does not intentionally store users' screenshots in the
+      database.
+    </p>
+
+    <h2>6. Third-party services</h2>
+
+    <p><strong>Google</strong></p>
+    <p>
+      Google services are used for authentication and Google Gemini may
+      be used to analyze screenshots and generate quiz answers.
+      Google's own terms and privacy policies may also apply to its
+      processing of information.
+    </p>
+
+    <p><strong>Hosting and database providers</strong></p>
+    <p>
+      QuizPeek uses third-party infrastructure providers to host the
+      backend service and database. These providers process information
+      only as necessary to provide the infrastructure used by QuizPeek.
+    </p>
+
+    <h2>7. Data sharing</h2>
+    <p>
+      QuizPeek does not sell, rent, or trade user data.
+    </p>
+
+    <p>
+      QuizPeek does not share user data with third parties for advertising
+      or unrelated marketing purposes.
+    </p>
+
+    <p>
+      Information may be transmitted to service providers required to
+      operate QuizPeek, including Google services, AI processing services,
+      hosting infrastructure, and database infrastructure.
+    </p>
+
+    <h2>8. Browsing activity</h2>
+    <p>
+      QuizPeek does not intentionally collect or store the user's browsing
+      history.
+    </p>
+
+    <p>
+      The extension accesses visible page content only when required by
+      features explicitly activated by the user, such as screenshot
+      capture or Auto Wayground functionality.
+    </p>
+
+    <h2>9. Local extension storage</h2>
+    <p>
+      QuizPeek may store information locally in the browser, including:
+    </p>
+
+    <ul>
+      <li>Extension settings</li>
+      <li>Auto Wayground settings</li>
+      <li>QuizPeek authentication token</li>
+      <li>Google authentication token</li>
+      <li>Cached account information</li>
+    </ul>
+
+    <p>
+      This local storage is used to maintain extension settings, sign-in
+      state, and account information between browser sessions.
+    </p>
+
+    <h2>10. Data retention</h2>
+    <p>
+      Account and service records may be retained while the user maintains
+      a QuizPeek account or while they are required for service operation,
+      security, accounting, abuse prevention, or legal obligations.
+    </p>
+
+    <p>
+      Screenshots are not intentionally stored as permanent database
+      records by QuizPeek and are processed temporarily to provide the
+      requested AI functionality.
+    </p>
+
+    <h2>11. Security</h2>
+    <p>
+      QuizPeek uses reasonable technical measures to protect information,
+      including authenticated API requests, HTTPS communication, server-side
+      storage of sensitive service credentials, and access controls for
+      administrative functionality.
+    </p>
+
+    <p>
+      However, no internet transmission or storage system can be guaranteed
+      to be completely secure.
+    </p>
+
+    <h2>12. User choices and account access</h2>
+    <p>
+      Users may sign out of QuizPeek through the extension. Signing out
+      removes locally stored authentication information from the extension.
+    </p>
+
+    <p>
+      Users may also choose not to use screenshot-based AI features.
+      Without submitting a screenshot, QuizPeek does not process that
+      screenshot for AI answering.
+    </p>
+
+    <h2>13. Children's privacy</h2>
+    <p>
+      QuizPeek is not specifically directed at children and does not
+      intentionally collect personal information from children as a
+      separate category.
+    </p>
+
+    <h2>14. Changes to this policy</h2>
+    <p>
+      QuizPeek may update this Privacy Policy when its features, services,
+      or data practices change. The updated version will be published on
+      this page with a new "Last updated" date.
+    </p>
+
+    <h2>15. Contact</h2>
+    <p>
+      For privacy questions, data requests, or concerns about QuizPeek's
+      privacy practices, please contact the QuizPeek developer through
+      the support contact provided on the Chrome Web Store listing.
+    </p>
+  </main>
 </body>
 </html>
