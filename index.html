@@ -107,10 +107,19 @@
 
     <h2>1. About QuizPeek</h2>
     <p>
-      QuizPeek is a browser extension that can capture the visible browser
-      tab when the user activates the quiz-answer feature. The captured
-      image is processed by QuizPeek's backend and may be sent to Google
-      Gemini to generate a concise answer.
+      QuizPeek is available as a browser extension and a native Android app.
+      The browser extension captures the visible browser tab when a user
+      activates the quiz-answer feature. The Android app can capture the
+      full display only after the user grants Android's screen-capture
+      permission and subsequently taps the floating QuizPeek (QP) button.
+      The captured image is sent securely to QuizPeek's backend and may be
+      sent to Google Gemini to generate the requested answer.
+    </p>
+    <p>
+      The Android app shows an in-app disclosure before starting the
+      screen-capture permission flow. Users should avoid capturing screens
+      containing passwords, financial details, private messages, or other
+      sensitive information.
     </p>
 
     <h2>2. Information we process</h2>
@@ -135,10 +144,12 @@
     </ul>
 
     <p>
-      Authentication information is used only to authenticate the user,
-      maintain the signed-in session, and authorize requests to QuizPeek.
-      Authentication tokens used by the extension are stored in the
-      browser's local extension storage.
+      Authentication information is used to authenticate the user, maintain
+      the signed-in session, and authorize requests to QuizPeek. The browser
+      extension stores its session token in local extension storage. The
+      Android app stores its QuizPeek session token in private app storage
+      and excludes that token file from Android cloud backup and device
+      transfer. Google sign-in credentials are used for the login exchange.
     </p>
 
     <p><strong>User-submitted screenshots</strong></p>
@@ -190,13 +201,25 @@
 
     <h2>4. How screenshots are processed</h2>
     <p>
-      When a user requests an AI answer, the screenshot is sent from the
-      QuizPeek extension to the QuizPeek backend over HTTPS.
+      In the browser extension, a screenshot of the visible browser tab is
+      captured only when the user activates the answer feature. In Android,
+      after granting Android's screen-capture permission, the user starts a
+      capture by tapping the floating QP button. The Android capture can
+      include the entire visible display, including content outside the
+      QuizPeek app.
     </p>
 
     <p>
-      The backend may send the screenshot to Google Gemini for AI analysis.
-      The screenshot is used to generate the requested quiz answer.
+      The screenshot is sent to the QuizPeek backend over HTTPS to process
+      the user's request. The backend may send it to Google Gemini for AI
+      analysis. This transfer is necessary to generate the requested answer.
+    </p>
+
+    <p>
+      QuizPeek does not use an Android AccessibilityService and does not
+      intentionally capture the screen automatically in the background.
+      Users should not activate capture on screens containing sensitive
+      information they do not want processed.
     </p>
 
     <p>
@@ -294,8 +317,11 @@
     </ul>
 
     <p>
-      This local storage is used to maintain extension settings, sign-in
-      state, and account information between browser sessions.
+      The extension uses local browser storage to maintain extension
+      settings, sign-in state, and account information between browser
+      sessions. The Android app stores its QuizPeek session token in private
+      app DataStore storage. That token storage is excluded from cloud
+      backup and device transfer.
     </p>
 
     <h2>10. Data retention</h2>
@@ -365,8 +391,8 @@
     <h2>15. Contact</h2>
     <p>
       For privacy questions, data requests, or concerns about QuizPeek's
-      privacy practices, please contact the QuizPeek developer through
-      the support contact provided on the Chrome Web Store listing.
+      privacy practices, email
+      <a href="mailto:baonhq.se@gmail.com">baonhq.se@gmail.com</a>.
     </p>
   </main>
 </body>
