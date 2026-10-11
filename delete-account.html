@@ -199,12 +199,12 @@
             </label>
 
             <div class="form-actions">
-              <button type="submit" class="btn-primary danger" id="btnSendMail">
+              <button type="submit" class="btn-primary danger" id="btnSendRequest">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                 <span>Gửi yêu cầu đến admin</span>
               </button>
 
-              <button type="button" class="btn-secondary" onclick="copyEmailTemplate()">
+              <button type="button" class="btn-secondary" onclick="copyRequestSummary()">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
                 <span>Sao chép nội dung yêu cầu</span>
               </button>
@@ -285,8 +285,8 @@
           <div class="step-item">
             <div class="step-num">2</div>
             <div class="step-body">
-              <h4>Kiểm tra & Xác minh danh tính</h4>
-              <p>Đội ngũ QuizPeek xác nhận tính chính chủ của email và kiểm tra tình trạng tài khoản trên cơ sở dữ liệu trong vòng 24 - 48 giờ.</p>
+              <h4>Đối chiếu tài khoản và xác minh</h4>
+              <p>Admin đối chiếu email với tài khoản trong cơ sở dữ liệu. Nếu chưa đủ thông tin để xác minh chủ sở hữu, admin có thể yêu cầu xác minh bổ sung trước khi thực hiện xóa.</p>
             </div>
           </div>
 
@@ -345,9 +345,9 @@
           Không. Theo điều khoản dịch vụ của QuizPeek, credits là gói lượt dùng dịch vụ số và không có giá trị quy đổi ngược lại tiền mặt khi người dùng chủ động yêu cầu xóa tài khoản.
         </p>
 
-        <h3>Tôi có thể hủy yêu cầu xóa sau khi đã gửi email không?</h3>
+        <h3>Tôi có thể hủy yêu cầu xóa sau khi đã gửi biểu mẫu không?</h3>
         <p>
-          Nếu đổi ý trước khi yêu cầu được xử lý, hãy liên hệ admin qua <a href="mailto:baonhq.se@gmail.com">kênh hỗ trợ QuizPeek</a> và cung cấp mã yêu cầu nếu đã được admin phản hồi cho bạn.
+          Nếu đổi ý trước khi yêu cầu được xử lý, hãy liên hệ <a href="mailto:baonhq.se@gmail.com">kênh hỗ trợ QuizPeek</a> và cung cấp mã yêu cầu nếu bạn đã nhận được mã này.
         </p>
       </section>
 
@@ -442,7 +442,7 @@
       const form = document.getElementById("deletionForm");
       if (!form.reportValidity()) return;
 
-      const button = document.getElementById("btnSendMail");
+      const button = document.getElementById("btnSendRequest");
       const buttonText = button.querySelector("span");
       const originalText = buttonText.textContent;
       button.disabled = true;
@@ -472,7 +472,7 @@
       }
     }
 
-    function copyEmailTemplate() {
+    function copyRequestSummary() {
       const request = buildRequestData();
       const text = [
         "Yêu cầu xóa tài khoản QuizPeek",
