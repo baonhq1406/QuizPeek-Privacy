@@ -462,7 +462,8 @@
           throw new Error(data.error || "Chưa gửi được yêu cầu. Vui lòng thử lại.");
         }
 
-        showToast(data.message || "Đã gửi yêu cầu đến admin QuizPeek.");
+        const requestIdText = data.requestId ? " Mã yêu cầu: #" + data.requestId + "." : "";
+        showToast((data.message || "Đã gửi yêu cầu đến admin QuizPeek.") + requestIdText);
         form.reset();
       } catch (error) {
         showToast(error.message || "Không thể kết nối đến QuizPeek. Vui lòng thử lại.");
