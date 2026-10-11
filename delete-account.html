@@ -1,52 +1,492 @@
 <!doctype html>
-<html lang="en">
+<html lang="vi" data-theme="dark">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Request deletion of your QuizPeek account and associated data.">
-  <title>QuizPeek Account & Data Deletion</title>
-  <style>
-    :root { color-scheme: light; --bg:#f6f7fb; --card:#fff; --text:#172033; --muted:#667085; --line:#e4e7ec; --accent:#5b4df5; }
-    * { box-sizing:border-box; }
-    body { margin:0; padding:24px; background:var(--bg); color:var(--text); font:16px/1.7 Arial,sans-serif; }
-    main { max-width:760px; margin:24px auto; padding:32px; background:var(--card); border:1px solid var(--line); border-radius:16px; }
-    h1 { margin:0 0 8px; font-size:30px; line-height:1.25; }
-    h2 { margin-top:28px; font-size:20px; }
-    .muted { color:var(--muted); font-size:14px; }
-    .notice { margin:20px 0; padding:14px 16px; border-left:4px solid var(--accent); background:#f1f0ff; border-radius:8px; }
-    .button { display:inline-block; margin:8px 0; padding:12px 18px; border-radius:9px; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; }
-    a { color:var(--accent); }
-    li { margin:8px 0; }
-    @media(max-width:600px) { body { padding:0; } main { margin:0; padding:24px 18px; border:0; border-radius:0; } h1 { font-size:26px; } }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Trang chính thức tiếp nhận yêu cầu xóa tài khoản và dữ liệu người dùng của QuizPeek - Tuân thủ chính sách Google Play Store và Chrome Web Store.">
+  <meta name="author" content="QuizPeek Team (baonhq1406)">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icon32.png">
+  <link rel="apple-touch-icon" sizes="128x128" href="assets/icon128.png">
+  <title>Yêu cầu Xóa Tài khoản & Dữ liệu — QuizPeek Account Deletion</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <main>
-    <h1>QuizPeek Account &amp; Data Deletion</h1>
-    <p class="muted">Official page for requesting deletion of a QuizPeek account and associated personal data.</p>
 
-    <div class="notice">
-      <strong>This page submits a request; it does not instantly delete your account.</strong>
-      The current QuizPeek backend does not provide self-service account deletion. The developer will review the request, verify account ownership, and process it manually.
+<body>
+  <!-- ── Header & Navigation ── -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-link" title="QuizPeek Legal Center">
+        <div class="brand-logo-wrap">
+          <img src="assets/logo.png" alt="QuizPeek Logo" class="brand-logo-img">
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">QuizPeek</span>
+          <span class="brand-tag">Legal & Trust Center</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" aria-label="Điều hướng">
+        <a href="index.html" class="nav-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+          <span>Quyền riêng tư</span>
+        </a>
+        <a href="delete-account.html" class="nav-link is-active">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 6h18m-2 0v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+          </svg>
+          <span>Yêu cầu xóa tài khoản</span>
+        </a>
+        <a href="mailto:baonhq.se@gmail.com" class="nav-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="20" height="16" x="2" y="4" rx="2"/>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L1 7"/>
+          </svg>
+          <span>Hỗ trợ</span>
+        </a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="themeToggle" class="theme-toggle-btn" type="button" aria-label="Chuyển chế độ sáng/tối" title="Đổi giao diện">
+          <svg id="iconMoon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 1 0 9.79 9.79z"/>
+          </svg>
+          <svg id="iconSun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Hero Banner ── -->
+  <section class="hero-section">
+    <div class="hero-pill-badge red">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M3 6h18m-2 0v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+      </svg>
+      <span>GOOGLE PLAY & WEB STORE COMPLIANT · DATA DELETION</span>
     </div>
 
-    <h2>How to request deletion</h2>
-    <ol>
-      <li>Send an email from the email address associated with your QuizPeek account, if you can access it.</li>
-      <li>Use the subject line <strong>QuizPeek account and data deletion request</strong>.</li>
-      <li>Include the QuizPeek account email address. Do not include passwords, verification codes, access tokens, or banking credentials.</li>
-      <li>The developer may ask for reasonable additional information to verify ownership before deleting the account.</li>
-    </ol>
+    <h1 class="hero-title">Yêu cầu Xóa Tài khoản & Dữ liệu</h1>
+    <p class="hero-subtitle">
+      Tuân thủ chính sách bảo vệ dữ liệu của Google Play Store và Chrome Web Store, người dùng QuizPeek có quyền yêu cầu xóa vĩnh viễn tài khoản và toàn bộ dữ liệu cá nhân liên quan bất kỳ lúc nào mà không cần cài đặt lại ứng dụng.
+    </p>
 
-    <p><a class="button" href="mailto:baonhq.se@gmail.com?subject=QuizPeek%20account%20and%20data%20deletion%20request&body=Hello%20QuizPeek%20developer%2C%0A%0AI%20request%20deletion%20of%20my%20QuizPeek%20account%20and%20associated%20personal%20data.%0A%0AQuizPeek account email: %0A%0APlease let me know if you need additional information to verify ownership.">Email a deletion request</a></p>
-    <p>Support email: <a href="mailto:baonhq.se@gmail.com">baonhq.se@gmail.com</a></p>
+    <div class="hero-meta-bar">
+      <div class="meta-item">
+        <span class="status-badge">
+          <span class="status-dot"></span>
+          Kênh tiếp nhận chính thức
+        </span>
+      </div>
+      <div class="meta-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span>Thời gian xử lý: <strong>3 – 7 ngày làm việc</strong></span>
+      </div>
+      <div class="meta-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <span>Email tiếp nhận: <strong>baonhq.se@gmail.com</strong></span>
+      </div>
+    </div>
 
-    <h2>What data is covered?</h2>
-    <p>The request covers the QuizPeek account and associated personal data, such as the Google account identifier, email/profile details, account settings, credits and credit transactions, usage records, and generated answers linked to the account, subject to any records that must be retained for legal, security, fraud-prevention, or accounting reasons.</p>
+    <!-- Highlights Grid -->
+    <div class="highlights-grid">
+      <div class="highlight-card">
+        <div class="highlight-icon-wrap amber">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </div>
+        <h3>Thao tác không thể hoàn tác</h3>
+        <p>Khi yêu cầu xóa được thực thi, tài khoản của bạn sẽ bị hủy vĩnh viễn và không thể khôi phục lại.</p>
+      </div>
 
-    <h2>What happens next?</h2>
-    <p>The developer will verify that the requester controls the account, review any applicable retention requirements, and then delete the account and eligible associated data from systems under QuizPeek's control. The developer will reply to confirm the outcome or explain if any data must be retained. Sending this email does not mean deletion has already completed.</p>
-    <p>For details about data practices, read the <a href="./index.html">QuizPeek Privacy Policy</a>.</p>
+      <div class="highlight-card">
+        <div class="highlight-icon-wrap purple">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><line x1="9" y1="9" x2="15" y2="15"/><line x1="15" y1="9" x2="9" y2="15"/></svg>
+        </div>
+        <h3>Số dư credits sẽ bị hủy</h3>
+        <p>Mọi lượt dùng (credits) còn lại trong tài khoản sẽ hết hiệu lực ngay khi tài khoản bị xóa bỏ.</p>
+      </div>
+
+      <div class="highlight-card">
+        <div class="highlight-icon-wrap green">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+        </div>
+        <h3>Xác minh chính chủ an toàn</h3>
+        <p>Yêu cầu bắt buộc phải được gửi từ đúng địa chỉ Email Google đã dùng để đăng ký tài khoản QuizPeek.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Main Content Layout ── -->
+  <main class="main-wrapper">
+    <!-- Sticky Sidebar -->
+    <aside class="sidebar-nav" aria-label="Mục lục hướng dẫn">
+      <div class="sidebar-title">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+        <span>Mục lục nội dung</span>
+      </div>
+      <ul class="toc-list" id="tocList">
+        <li><a href="#del-form" class="toc-link is-active">1. Biểu mẫu gửi yêu cầu xóa</a></li>
+        <li><a href="#del-data-scope" class="toc-link">2. Phạm vi dữ liệu được xóa</a></li>
+        <li><a href="#del-process" class="toc-link">3. Quy trình xác minh & xử lý</a></li>
+        <li><a href="#del-local" class="toc-link">4. Hướng dẫn tự xóa trên thiết bị</a></li>
+        <li><a href="#del-faq" class="toc-link">5. Câu hỏi thường gặp (FAQ)</a></li>
+      </ul>
+    </aside>
+
+    <!-- Document Article -->
+    <article class="document-article">
+
+      <!-- Section: Interactive Form -->
+      <section class="article-section" id="del-form">
+        <h2><span class="section-number">01</span> Biểu mẫu gửi yêu cầu xóa tài khoản</h2>
+        <p>
+          Do hệ thống máy chủ QuizPeek hiện thực hiện quy trình xác minh thủ công để bảo vệ an toàn cho người dùng (tránh việc tài khoản bị xóa nhầm hoặc bị bên thứ ba phá hoại), 
+          vui lòng sử dụng biểu mẫu dưới đây để tạo email yêu cầu chính thức gửi đến đội ngũ hỗ trợ QuizPeek.
+        </p>
+
+        <div class="form-card">
+          <div class="form-title-row">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="color: #ef4444;"><path d="M3 6h18m-2 0v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+            <h3>Tạo yêu cầu xóa tài khoản QuizPeek</h3>
+          </div>
+
+          <form id="deletionForm" onsubmit="handleFormSubmit(event)">
+            <div class="form-group">
+              <label for="userEmail" class="form-label">
+                Địa chỉ Email tài khoản Google của bạn <span style="color: #ef4444;">*</span>
+              </label>
+              <input type="email" id="userEmail" class="form-input" placeholder="ví dụ: yourname@gmail.com" required autocomplete="email">
+              <small style="color: var(--text-muted); font-size: 12px; margin-top: 4px; display: block;">
+                Lưu ý: Bắt buộc phải là địa chỉ email bạn đã sử dụng để đăng nhập vào QuizPeek.
+              </small>
+            </div>
+
+            <div class="form-group">
+              <label for="deleteReason" class="form-label">Lý do yêu cầu xóa tài khoản (tùy chọn)</label>
+              <select id="deleteReason" class="form-select">
+                <option value="Không còn nhu cầu sử dụng QuizPeek">Tôi không còn nhu cầu sử dụng QuizPeek</option>
+                <option value="Lo ngại về quyền riêng tư và bảo mật dữ liệu">Tôi muốn xóa dữ liệu vì lý do bảo mật / quyền riêng tư</option>
+                <option value="Muốn đổi sang tài khoản Google khác">Tôi muốn chuyển đổi sang tài khoản Google khác</option>
+                <option value="Khác">Lý do khác...</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="extraNotes" class="form-label">Ghi chú bổ sung (nếu có)</label>
+              <textarea id="extraNotes" class="form-textarea" rows="3" placeholder="Ghi chú thêm nếu bạn cần hỗ trợ xử lý đặc biệt..."></textarea>
+            </div>
+
+            <label class="form-checkbox-label">
+              <input type="checkbox" id="confirmCheckbox" required>
+              <span>
+                Tôi xác nhận rằng tôi là chủ sở hữu hợp pháp của tài khoản email nêu trên. Tôi hiểu rõ rằng thao tác xóa tài khoản này 
+                <strong>không thể hoàn tác</strong> và toàn bộ số credits còn lại trong ví sẽ bị hủy vĩnh viễn.
+              </span>
+            </label>
+
+            <div class="form-actions">
+              <button type="submit" class="btn-primary danger" id="btnSendMail">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L1 7"/></svg>
+                <span>Mở Email gửi yêu cầu</span>
+              </button>
+
+              <button type="button" class="btn-secondary" onclick="copyEmailTemplate()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                <span>Sao chép nội dung email mẫu</span>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="callout-box danger">
+          <div class="callout-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <div class="callout-content">
+            <strong>Cảnh báo an toàn</strong>
+            Vì lý do bảo mật, <strong>tuyệt đối KHÔNG gửi mật khẩu Google, token bí mật hoặc mã OTP</strong> trong email yêu cầu xóa. Đội ngũ phát triển QuizPeek không bao giờ yêu cầu bạn cung cấp mật khẩu tài khoản.
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Data Scope -->
+      <section class="article-section" id="del-data-scope">
+        <h2><span class="section-number">02</span> Phạm vi dữ liệu được xóa (Data Deletion Scope)</h2>
+        <p>Tuân thủ minh bạch chính sách dữ liệu người dùng, dưới đây là chi tiết các loại dữ liệu bị xóa và giữ lại:</p>
+
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Hạng mục dữ liệu</th>
+                <th>Hình thức xử lý</th>
+                <th>Mô tả chi tiết</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Hồ sơ Google cá nhân</strong></td>
+                <td><span class="badge-tag no">Xóa vĩnh viễn</span></td>
+                <td>Mã Google Subject ID, Địa chỉ Email, Họ và tên, Đường dẫn ảnh đại diện (Avatar URL) liên kết với QuizPeek.</td>
+              </tr>
+              <tr>
+                <td><strong>Lịch sử & Credits</strong></td>
+                <td><span class="badge-tag no">Xóa vĩnh viễn</span></td>
+                <td>Số dư credits còn lại, lịch sử tiêu thụ credits của từng lần giải bài tập.</td>
+              </tr>
+              <tr>
+                <td><strong>Nhật ký hỏi/đáp AI</strong></td>
+                <td><span class="badge-tag no">Xóa vĩnh viễn</span></td>
+                <td>Dấu thời gian yêu cầu AI, token đầu vào/đầu ra, các đáp án trả về gắn với mã định danh của bạn.</td>
+              </tr>
+              <tr>
+                <td><strong>Phiên làm việc & Token</strong></td>
+                <td><span class="badge-tag no">Hủy hiệu lực tức thì</span></td>
+                <td>Toàn bộ JSON Web Token (JWT) và quyền xác thực trên máy chủ bị vô hiệu hóa hoàn toàn.</td>
+              </tr>
+              <tr>
+                <td><strong>Bản ghi giao dịch nạp tiền</strong><br><small>(VietQR / SePay)</small></td>
+                <td><span class="badge-tag temp">Ẩn danh hóa</span><br><small>Lưu theo luật kế toán</small></td>
+                <td>Các bản ghi thanh toán chuyển khoản được lưu giữ tối thiểu theo quy định của pháp luật về kế toán và thuế, nhưng <strong>được ngắt kết nối hoàn toàn khỏi danh tính và email của bạn</strong> (Anonymized).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section: Process -->
+      <section class="article-section" id="del-process">
+        <h2><span class="section-number">03</span> Quy trình xác minh & xử lý (Step-by-step Process)</h2>
+        <p>Yêu cầu xóa tài khoản của bạn sẽ trải qua quy trình 4 bước chuẩn hóa:</p>
+
+        <div class="steps-container">
+          <div class="step-item">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <h4>Gửi yêu cầu qua Email chính thức</h4>
+              <p>Bạn gửi email tới <a href="mailto:baonhq.se@gmail.com">baonhq.se@gmail.com</a> từ chính địa chỉ email Google bạn đã dùng để đăng ký QuizPeek.</p>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <h4>Kiểm tra & Xác minh danh tính</h4>
+              <p>Đội ngũ QuizPeek xác nhận tính chính chủ của email và kiểm tra tình trạng tài khoản trên cơ sở dữ liệu trong vòng 24 - 48 giờ.</p>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <h4>Thực thi xóa dữ liệu trên hệ thống</h4>
+              <p>Quản trị viên thực hiện xóa vĩnh viễn bản ghi tài khoản, lịch sử token và credits liên quan trên CSDL PostgreSQL máy chủ.</p>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-num">4</div>
+            <div class="step-body">
+              <h4>Gửi email xác nhận hoàn tất</h4>
+              <p>Một email thông báo xác nhận tài khoản đã được xóa thành công sẽ được gửi về hộp thư của bạn. Quy trình hoàn tất.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Local Clean up -->
+      <section class="article-section" id="del-local">
+        <h2><span class="section-number">04</span> Hướng dẫn tự xóa dữ liệu trên thiết bị cục bộ</h2>
+        <p>Bên cạnh việc yêu cầu máy chủ xóa dữ liệu đám mây, bạn nên gỡ bỏ tiện ích hoặc ứng dụng để xóa sạch bộ nhớ đệm cục bộ trên máy:</p>
+
+        <h3>A. Trên máy tính (Google Chrome Extension)</h3>
+        <ol>
+          <li>Mở trình duyệt Google Chrome.</li>
+          <li>Nhấp vào biểu tượng <strong>Mảnh ghép tiện ích (Extensions)</strong> ở góc trên bên phải thanh địa chỉ.</li>
+          <li>Tìm <strong>QuizPeek</strong>, nhấn vào dấu 3 chấm dọc và chọn <strong>"Xóa khỏi Chrome..." (Remove from Chrome)</strong>.</li>
+          <li>Xác nhận xóa. Mọi cài đặt và mã token cục bộ trong <code>chrome.storage</code> sẽ được trình duyệt dọn dẹp sạch sẽ.</li>
+        </ol>
+
+        <h3>B. Trên điện thoại Android (Mobile App)</h3>
+        <ol>
+          <li>Mở <strong>Cài đặt (Settings)</strong> trên điện thoại Android của bạn.</li>
+          <li>Chọn mục <strong>Ứng dụng (Apps)</strong> &rarr; Chọn <strong>QuizPeek</strong>.</li>
+          <li>Chọn mục <strong>Lưu trữ & Bộ nhớ đệm (Storage & Cache)</strong> &rarr; Nhấn <strong>"Xóa bộ nhớ lưu trữ" (Clear Storage)</strong>.</li>
+          <li>Quay lại màn hình chi tiết ứng dụng và nhấn <strong>"Gỡ cài đặt" (Uninstall)</strong>.</li>
+        </ol>
+      </section>
+
+      <!-- Section: FAQ -->
+      <section class="article-section" id="del-faq">
+        <h2><span class="section-number">05</span> Câu hỏi thường gặp (FAQ)</h2>
+        
+        <h3>Sau khi xóa, tôi có thể đăng ký lại tài khoản mới bằng cùng Email đó không?</h3>
+        <p>
+          Có. Sau khi dữ liệu cũ đã bị xóa sạch, nếu bạn quay lại sử dụng QuizPeek trong tương lai và đăng nhập bằng Google, 
+          hệ thống sẽ tạo một tài khoản hoàn toàn mới như một người dùng lần đầu (với số credits khởi tạo ban đầu).
+        </p>
+
+        <h3>Credits chưa sử dụng có được hoàn tiền khi xóa tài khoản không?</h3>
+        <p>
+          Không. Theo điều khoản dịch vụ của QuizPeek, credits là gói lượt dùng dịch vụ số và không có giá trị quy đổi ngược lại tiền mặt khi người dùng chủ động yêu cầu xóa tài khoản.
+        </p>
+
+        <h3>Tôi có thể hủy yêu cầu xóa sau khi đã gửi email không?</h3>
+        <p>
+          Nếu bạn đổi ý, vui lòng gửi ngay một email phản hồi lại với tiêu đề <em>"[Hủy yêu cầu] Tôi muốn tiếp tục sử dụng QuizPeek"</em> trong vòng 24 giờ kể từ khi gửi yêu cầu ban đầu.
+        </p>
+      </section>
+
+    </article>
   </main>
+
+  <!-- ── Footer ── -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="brand-link">
+          <div class="brand-logo-wrap" style="width: 28px; height: 28px;">
+            <img src="assets/logo.png" alt="QuizPeek Logo" class="brand-logo-img" style="width: 18px; height: 18px;">
+          </div>
+          <span class="brand-name" style="font-size: 16px;">QuizPeek</span>
+        </div>
+        <div class="footer-links">
+          <a href="index.html">Chính sách Quyền riêng tư</a>
+          <a href="delete-account.html">Yêu cầu Xóa tài khoản</a>
+          <a href="mailto:baonhq.se@gmail.com">Email Hỗ trợ</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 QuizPeek by baonhq1406. Mọi quyền được bảo lưu.</span>
+        <span>Google Play Account Deletion Requirement Compliant</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast-msg" role="status" aria-live="polite">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color: #10b981;"><polyline points="20 6 9 17 4 12"/></svg>
+    <span id="toastText">Đã sao chép nội dung email vào bộ nhớ tạm!</span>
+  </div>
+
+  <!-- ── Client Scripts ── -->
+  <script>
+    // Theme toggle
+    const themeToggleBtn = document.getElementById("themeToggle");
+    const iconMoon = document.getElementById("iconMoon");
+    const iconSun = document.getElementById("iconSun");
+    const htmlEl = document.documentElement;
+
+    function applyTheme(theme) {
+      htmlEl.setAttribute("data-theme", theme);
+      if (theme === "light") {
+        iconMoon.style.display = "none";
+        iconSun.style.display = "block";
+      } else {
+        iconMoon.style.display = "block";
+        iconSun.style.display = "none";
+      }
+      localStorage.setItem("quizpeek_theme", theme);
+    }
+
+    const savedTheme = localStorage.getItem("quizpeek_theme") || "dark";
+    applyTheme(savedTheme);
+
+    themeToggleBtn.addEventListener("click", () => {
+      const current = htmlEl.getAttribute("data-theme");
+      applyTheme(current === "light" ? "dark" : "light");
+    });
+
+    // Toast helper
+    function showToast(message) {
+      const toast = document.getElementById("toast");
+      const toastText = document.getElementById("toastText");
+      toastText.textContent = message;
+      toast.classList.add("show");
+      setTimeout(() => {
+        toast.classList.remove("show");
+      }, 3500);
+    }
+
+    // Build Email mailto URI and body
+    function buildEmailData() {
+      const email = document.getElementById("userEmail").value.trim() || "[Điền email của bạn]";
+      const reason = document.getElementById("deleteReason").value;
+      const notes = document.getElementById("extraNotes").value.trim();
+
+      const subject = encodeURIComponent(`[QuizPeek] Yêu cầu xóa tài khoản và dữ liệu cá nhân - ${email}`);
+      const bodyText = `Kính gửi Đội ngũ Hỗ trợ QuizPeek,
+
+Tôi gửi thư này từ địa chỉ email chính chủ đã đăng ký sử dụng QuizPeek để yêu cầu xóa vĩnh viễn tài khoản và toàn bộ dữ liệu cá nhân liên quan của tôi trên hệ thống.
+
+Thông tin chi tiết yêu cầu:
+- Email tài khoản QuizPeek: ${email}
+- Lý do yêu cầu xóa: ${reason}
+${notes ? `- Ghi chú thêm: ${notes}\n` : ""}
+Tôi hiểu rằng:
+1. Thao tác xóa tài khoản là vĩnh viễn và không thể khôi phục lại.
+2. Toàn bộ số lượt dùng (credits) còn lại trong tài khoản sẽ bị hủy bỏ.
+3. Toàn bộ phiên đăng nhập và quyền truy cập sẽ bị ngắt kết nối.
+
+Rất mong đội ngũ QuizPeek xác nhận và tiến hành xóa dữ liệu của tôi theo quy định của Google Play Store và Chính sách quyền riêng tư.
+
+Xin chân thành cảm ơn!
+Người yêu cầu: ${email}`;
+
+      const mailtoUrl = `mailto:baonhq.se@gmail.com?subject=${subject}&body=${encodeURIComponent(bodyText)}`;
+      return { mailtoUrl, bodyText };
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const emailInput = document.getElementById("userEmail");
+      if (!emailInput.value.trim()) {
+        alert("Vui lòng nhập địa chỉ email tài khoản Google của bạn.");
+        emailInput.focus();
+        return;
+      }
+      const { mailtoUrl } = buildEmailData();
+      window.location.href = mailtoUrl;
+      showToast("Đang mở trình gửi email mặc định của bạn...");
+    }
+
+    function copyEmailTemplate() {
+      const { bodyText } = buildEmailData();
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(bodyText).then(() => {
+          showToast("Đã sao chép nội dung email mẫu vào bộ nhớ tạm!");
+        }).catch(() => {
+          fallbackCopyText(bodyText);
+        });
+      } else {
+        fallbackCopyText(bodyText);
+      }
+    }
+
+    function fallbackCopyText(text) {
+      const textArea = document.createElement("textarea");
+      textArea.value = text;
+      document.body.appendChild(textArea);
+      textArea.select();
+      try {
+        document.execCommand("copy");
+        showToast("Đã sao chép nội dung email mẫu!");
+      } catch (err) {
+        alert("Không thể tự động sao chép. Bạn vui lòng tự sao chép văn bản.");
+      }
+      document.body.removeChild(textArea);
+    }
+  </script>
 </body>
 </html>
