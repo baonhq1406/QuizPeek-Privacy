@@ -197,8 +197,12 @@
       website, QuizPeek processes the account email, optional message, request
       source, request status, timestamps, and administrative processing notes.
       This information is used to verify ownership, prevent duplicate or
-      abusive requests, and complete the deletion process. After a request
-      is processed, QuizPeek removes the request email, message, and admin
+      abusive requests, and complete the deletion process. After an authenticated
+      request is accepted, the account is scheduled for automatic deletion 7 days
+      later. The user can sign in on the deletion page during that grace period
+      to cancel the request. If it is not cancelled before the scheduled time,
+      QuizPeek automatically deletes the account and eligible linked data.
+      After deletion, QuizPeek removes the request email, message, and admin
       notes and retains only an anonymized request reference and status.
     </p>
 
@@ -407,14 +411,17 @@
       <a href="./delete-account.html">Account and Data Deletion page</a>.
       The web request page requires Google sign-in with the same Google
       account already linked to QuizPeek. The account email is taken from
-      the authenticated QuizPeek account, not entered manually. Requests are
-      stored for admin review and are processed after ownership is verified.
-      The admin deletion workflow can delete the user account, account-linked
-      usage records, credit transactions, payment orders, and other eligible
-      related data. A minimal anonymized deletion-request record may be
-      retained for audit purposes. Submitting a request does not mean deletion
-      has already completed. Some records may be retained where required for
-      legal, security, fraud-prevention, or accounting obligations.
+      the authenticated QuizPeek account, not entered manually. Once the
+      signed-in account is verified, the request is scheduled for automatic
+      deletion 7 days later. Users can sign in on the same page and cancel
+      before the scheduled time. If not cancelled, a backend task periodically
+      deletes the account and eligible account-linked usage records, credit
+      transactions, payment orders, and other related data. A minimal anonymized
+      deletion-request record may be retained for audit purposes. Submitting
+      a request does not mean deletion has already completed; automatic
+      processing may occur shortly after the scheduled time. Some records may
+      be retained where required for legal, security, fraud-prevention, or
+      accounting obligations.
     </p>
 
     <h2>13. Children's privacy</h2>
