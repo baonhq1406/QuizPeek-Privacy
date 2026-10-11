@@ -103,6 +103,10 @@
       QuizPeek is designed to process only the information necessary
       to provide its login, quiz-answering, account, and usage features.
       QuizPeek does not sell user data or use it for advertising.
+      <br><br>
+      <strong>Chrome Web Store Limited Use:</strong>
+      The use of information received from Google APIs will adhere to the
+      Chrome Web Store User Data Policy, including the Limited Use requirements.
     </div>
 
     <h2>1. About QuizPeek</h2>
@@ -216,10 +220,14 @@
     </p>
 
     <p>
-      QuizPeek does not use an Android AccessibilityService and does not
-      intentionally capture the screen automatically in the background.
-      Users should not activate capture on screens containing sensitive
-      information they do not want processed.
+      In the browser extension, the user must first accept the in-extension
+      privacy disclosure before QuizPeek can send a screenshot for answering.
+      Auto Wayground may capture quiz screens while the user has enabled that
+      feature and accepted the disclosure. QuizPeek does not use an Android
+      AccessibilityService. Android captures begin only after the user grants
+      screen-capture permission and taps the floating QP button. Users should
+      not activate capture on screens containing sensitive information they do
+      not want processed.
     </p>
 
     <p>
@@ -236,10 +244,13 @@
 
     <h2>5. Data storage</h2>
     <p>
-      QuizPeek stores account and service information in its backend
-      database. This may include Google account identifiers, email,
+      QuizPeek stores account and service information in its PostgreSQL
+      backend database. This may include Google account identifiers, email,
       profile information, plan, credits, credit transactions, usage
-      statistics, and generated answers.
+      statistics, generated answers, model identifiers, token counts, and
+      request timestamps. The backend writes generated answers to persistent
+      usage records linked to the requesting account; they are not only held
+      in the short-lived in-memory answer cache.
     </p>
 
     <p>
@@ -265,11 +276,16 @@
       credit allocation, transaction records, and related service security.
     </p>
 
-    <p><strong>Hosting and database providers</strong></p>
+    <p><strong>Render, PostgreSQL, and GitHub Pages</strong></p>
     <p>
-      QuizPeek uses third-party infrastructure providers to host the
-      backend service and database. These providers process information
-      only as necessary to provide the infrastructure used by QuizPeek.
+      Render hosts the QuizPeek backend API. The backend uses a PostgreSQL
+      database configured through the deployment's DATABASE_URL setting.
+      The operator should confirm the actual database hosting provider in the
+      deployment configuration before relying on this policy as a complete
+      list of providers. The public privacy and deletion pages are hosted on
+      GitHub Pages. These infrastructure providers may process technical
+      connection and service logs as part of providing and securing their
+      services.
     </p>
 
     <h2>7. Data sharing</h2>
@@ -326,15 +342,27 @@
 
     <h2>10. Data retention</h2>
     <p>
-      Account and service records may be retained while the user maintains
-      a QuizPeek account or while they are required for service operation,
-      security, accounting, abuse prevention, or legal obligations.
+      QuizPeek stores generated answers and associated usage metadata in
+      persistent database records linked to the account that made the
+      request. These records are retained while needed to operate the
+      service, provide usage and credit accounting, prevent abuse, maintain
+      security, or comply with legal obligations. When a verified deletion
+      request is processed, QuizPeek deletes account-linked usage and other
+      eligible account records from systems under its control. Some records
+      may be retained or anonymized where required for legal, security,
+      fraud-prevention, or accounting reasons.
     </p>
-
     <p>
-      Screenshots are not intentionally stored as permanent database
-      records by QuizPeek and are processed temporarily to provide the
-      requested AI functionality.
+      The backend also keeps a temporary in-memory cache of generated answers
+      to reduce duplicate AI requests (currently configured for about one
+      minute). This cache is separate from persistent usage records.
+    </p>
+    <p>
+      Screenshots are not intentionally written as persistent user records
+      to QuizPeek's application database. They are processed temporarily by
+      the backend and may be transmitted to Google Gemini for analysis. Any
+      separate processing or retention by the AI provider is governed by
+      that provider's applicable terms and data policies.
     </p>
 
     <h2>11. Security</h2>
@@ -365,11 +393,14 @@
     <h2>12A. Account and data deletion</h2>
     <p>
       Users may request deletion of their QuizPeek account and associated
-      personal data by following the instructions on the
+      personal data by submitting the form on the
       <a href="./delete-account.html">Account and Data Deletion page</a>.
-      The current backend does not provide automatic self-service deletion,
-      so requests are reviewed and processed manually after account ownership
-      is verified. Submitting a request does not mean deletion has already
+      Requests are stored for admin review and are processed manually after
+      account ownership is verified. After verification, the admin deletion
+      workflow can delete the user account, account-linked usage records,
+      credit transactions, payment orders, and other eligible related data.
+      A minimal anonymized deletion-request record may be retained for audit
+      purposes. Submitting a request does not mean deletion has already
       completed. Some records may be retained where required for legal,
       security, fraud-prevention, or accounting obligations.
     </p>
