@@ -1,534 +1,399 @@
 <!doctype html>
-<html lang="vi" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Chính sách quyền riêng tư chính thức của QuizPeek (Chrome Extension & Android App) - Cam kết bảo mật, minh bạch và an toàn dữ liệu người dùng.">
-  <meta name="author" content="QuizPeek Team (baonhq1406)">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/icon32.png">
-  <link rel="apple-touch-icon" sizes="128x128" href="assets/icon128.png">
-  <title>Chính sách Quyền riêng tư — QuizPeek Privacy Policy</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="QuizPeek Privacy Policy">
+  <title>QuizPeek Privacy Policy</title>
+
+  <style>
+    :root {
+      --bg: #f6f7fb;
+      --card: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --line: #e4e7ec;
+      --accent: #5b4df5;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.7 Arial, sans-serif;
+    }
+
+    main {
+      max-width: 860px;
+      margin: 40px auto;
+      padding: 32px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 32px;
+      color: #111827;
+    }
+
+    h2 {
+      margin-top: 30px;
+      margin-bottom: 10px;
+      font-size: 20px;
+      color: #111827;
+    }
+
+    p {
+      margin: 8px 0 14px;
+    }
+
+    ul {
+      margin-top: 8px;
+      padding-left: 24px;
+    }
+
+    li {
+      margin: 6px 0;
+    }
+
+    .updated {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .note {
+      padding: 14px 16px;
+      margin: 18px 0;
+      background: #f1f0ff;
+      border-left: 4px solid var(--accent);
+      border-radius: 8px;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        margin: 0;
+        padding: 22px 18px;
+        border-radius: 0;
+        border: 0;
+      }
+
+      h1 {
+        font-size: 27px;
+      }
+
+      h2 {
+        font-size: 18px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <!-- ── Header & Navigation ── -->
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="index.html" class="brand-link" title="QuizPeek Legal Center">
-        <div class="brand-logo-wrap">
-          <img src="assets/logo.png" alt="QuizPeek Logo" class="brand-logo-img">
-        </div>
-        <div class="brand-text">
-          <span class="brand-name">QuizPeek</span>
-          <span class="brand-tag">Legal & Trust Center</span>
-        </div>
-      </a>
+  <main>
+    <h1>QuizPeek Privacy Policy</h1>
+    <p class="updated">Last updated: October 2026</p>
 
-      <nav class="nav-menu" aria-label="Điều hướng">
-        <a href="index.html" class="nav-link is-active">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-          </svg>
-          <span>Quyền riêng tư</span>
-        </a>
-        <a href="delete-account.html" class="nav-link">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 6h18m-2 0v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
-          </svg>
-          <span>Yêu cầu xóa tài khoản</span>
-        </a>
-        <a href="mailto:baonhq.se@gmail.com" class="nav-link">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <rect width="20" height="16" x="2" y="4" rx="2"/>
-            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L1 7"/>
-          </svg>
-          <span>Hỗ trợ</span>
-        </a>
-      </nav>
-
-      <div class="header-actions">
-        <button id="themeToggle" class="theme-toggle-btn" type="button" aria-label="Chuyển chế độ sáng/tối" title="Đổi giao diện">
-          <svg id="iconMoon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 1 0 9.79 9.79z"/>
-          </svg>
-          <svg id="iconSun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
-            <circle cx="12" cy="12" r="5"/>
-            <line x1="12" y1="1" x2="12" y2="3"/>
-            <line x1="12" y1="21" x2="12" y2="23"/>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-            <line x1="1" y1="12" x2="3" y2="12"/>
-            <line x1="21" y1="12" x2="23" y2="12"/>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <!-- ── Hero Banner ── -->
-  <section class="hero-section">
-    <div class="hero-pill-badge">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-      </svg>
-      <span>CHÍNH THỨC & BẢO MẬT · COMPLIANCE 2026</span>
+    <div class="note">
+      QuizPeek is designed to process only the information necessary
+      to provide its login, quiz-answering, account, and usage features.
+      QuizPeek does not sell user data or use it for advertising.
     </div>
 
-    <h1 class="hero-title">Chính sách Quyền riêng tư QuizPeek</h1>
-    <p class="hero-subtitle">
-      QuizPeek cam kết bảo vệ toàn diện dữ liệu cá nhân của người dùng trên cả tiện ích mở rộng 
-      <strong>Chrome Extension</strong> và ứng dụng di động <strong>Android App</strong>. 
-      Chúng tôi chỉ xử lý những thông tin thiết yếu phục vụ chức năng giải bài tập trắc nghiệm và tuyệt đối không thương mại hóa dữ liệu.
+    <h2>1. About QuizPeek</h2>
+    <p>
+      QuizPeek is available as a browser extension and a native Android app.
+      The browser extension captures the visible browser tab when a user
+      activates the quiz-answer feature. The Android app can capture the
+      full display only after the user grants Android's screen-capture
+      permission and subsequently taps the floating QuizPeek (QP) button.
+      The captured image is sent securely to QuizPeek's backend and may be
+      sent to Google Gemini to generate the requested answer.
+    </p>
+    <p>
+      The Android app shows an in-app disclosure before starting the
+      screen-capture permission flow. Users should avoid capturing screens
+      containing passwords, financial details, private messages, or other
+      sensitive information.
     </p>
 
-    <div class="hero-meta-bar">
-      <div class="meta-item">
-        <span class="status-badge">
-          <span class="status-dot"></span>
-          Đang có hiệu lực
-        </span>
-      </div>
-      <div class="meta-item">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        <span>Cập nhật gần nhất: <strong>Tháng 10/2026</strong></span>
-      </div>
-      <div class="meta-item">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
-        <span>Phạm vi: <strong>Chrome Extension & Android Mobile App</strong></span>
-      </div>
-      <div class="meta-item">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        <span>Nhà phát triển: <strong>baonhq1406</strong></span>
-      </div>
-    </div>
+    <h2>2. Information we process</h2>
 
-    <!-- Quick Highlights Grid -->
-    <div class="highlights-grid">
-      <div class="highlight-card">
-        <div class="highlight-icon-wrap purple">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <h3>Không bán dữ liệu</h3>
-        <p>Tuyệt đối không bán, không cho thuê hoặc chuyển giao dữ liệu cho bên thứ ba vì mục đích quảng cáo hoặc tiếp thị.</p>
-      </div>
+    <p><strong>Google account information</strong></p>
+    <ul>
+      <li>Google account identifier (Google subject ID)</li>
+      <li>Email address</li>
+      <li>Name</li>
+      <li>Profile picture</li>
+    </ul>
 
-      <div class="highlight-card">
-        <div class="highlight-icon-wrap green">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/><polyline points="9 11 12 14 22 4"/></svg>
-        </div>
-        <h3>Xử lý ảnh tạm thời</h3>
-        <p>Ảnh chụp câu hỏi chỉ được truyền qua HTTPS để AI phân tích và giải phóng ngay, không lưu trữ vĩnh viễn trong CSDL.</p>
-      </div>
+    <p>
+      This information is obtained from Google when the user signs in
+      with Google and is used to create and manage the QuizPeek account.
+    </p>
 
-      <div class="highlight-card">
-        <div class="highlight-icon-wrap cyan">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        </div>
-        <h3>Mã hóa toàn diện</h3>
-        <p>Mọi kết nối API được bảo vệ bởi giao thức HTTPS/TLS đạt chuẩn mã hóa quốc tế và mã xác thực bảo mật JWT.</p>
-      </div>
+    <p><strong>Authentication information</strong></p>
+    <ul>
+      <li>Google authentication token used during the login process</li>
+      <li>QuizPeek authentication token (JWT)</li>
+    </ul>
 
-      <div class="highlight-card">
-        <div class="highlight-icon-wrap amber">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 6h18m-2 0v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
-        </div>
-        <h3>Toàn quyền xóa bỏ</h3>
-        <p>Người dùng có thể yêu cầu xóa vĩnh viễn tài khoản và toàn bộ bản ghi dữ liệu cá nhân liên quan bất cứ lúc nào.</p>
-      </div>
-    </div>
-  </section>
+    <p>
+      Authentication information is used to authenticate the user, maintain
+      the signed-in session, and authorize requests to QuizPeek. The browser
+      extension stores its session token in local extension storage. The
+      Android app stores its QuizPeek session token in private app storage
+      and excludes that token file from Android cloud backup and device
+      transfer. Google sign-in credentials are used for the login exchange.
+    </p>
 
-  <!-- ── Main Content Layout ── -->
-  <main class="main-wrapper">
-    <!-- Sticky Table of Contents -->
-    <aside class="sidebar-nav" aria-label="Mục lục chính sách">
-      <div class="sidebar-title">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
-        <span>Mục lục văn bản</span>
-      </div>
-      <ul class="toc-list" id="tocList">
-        <li><a href="#sec-1" class="toc-link is-active">1. Giới thiệu về QuizPeek</a></li>
-        <li><a href="#sec-2" class="toc-link">2. Thông tin chúng tôi xử lý</a></li>
-        <li><a href="#sec-3" class="toc-link">3. Bảng minh bạch dữ liệu</a></li>
-        <li><a href="#sec-4" class="toc-link">4. Mục đích sử dụng dữ liệu</a></li>
-        <li><a href="#sec-5" class="toc-link">5. Quy trình xử lý ảnh & AI</a></li>
-        <li><a href="#sec-6" class="toc-link">6. Cơ chế lưu trữ dữ liệu</a></li>
-        <li><a href="#sec-7" class="toc-link">7. Dịch vụ bên thứ ba</a></li>
-        <li><a href="#sec-8" class="toc-link">8. Cam kết chia sẻ dữ liệu</a></li>
-        <li><a href="#sec-9" class="toc-link">9. Hoạt động duyệt web & màn hình</a></li>
-        <li><a href="#sec-10" class="toc-link">10. Lưu trữ cục bộ thiết bị</a></li>
-        <li><a href="#sec-11" class="toc-link">11. Thời hạn lưu giữ dữ liệu</a></li>
-        <li><a href="#sec-12" class="toc-link">12. Các biện pháp an toàn bảo mật</a></li>
-        <li><a href="#sec-13" class="toc-link">13. Quyền của bạn & Xóa tài khoản</a></li>
-        <li><a href="#sec-14" class="toc-link">14. Quyền riêng tư của trẻ em</a></li>
-        <li><a href="#sec-15" class="toc-link">15. Thay đổi chính sách & Liên hệ</a></li>
-      </ul>
-    </aside>
+    <p><strong>User-submitted screenshots</strong></p>
+    <p>
+      When the user requests an answer, QuizPeek may capture the visible
+      browser tab. The screenshot may contain text, images, quiz questions,
+      answer choices, or other information visible on the screen.
+    </p>
 
-    <!-- Document Article -->
-    <article class="document-article">
+    <p><strong>Account and usage information</strong></p>
+    <ul>
+      <li>Account status and role</li>
+      <li>Plan information</li>
+      <li>Credits and credit transactions</li>
+      <li>AI request count</li>
+      <li>Input and output token usage</li>
+      <li>AI model used</li>
+      <li>Returned answer</li>
+      <li>Request timestamps</li>
+    </ul>
 
-      <!-- Section 1 -->
-      <section class="article-section" id="sec-1">
-        <h2><span class="section-number">01</span> Giới thiệu về QuizPeek (About QuizPeek)</h2>
-        <p>
-          <strong>QuizPeek</strong> là hệ thống hỗ trợ học tập đa nền tảng, bao gồm tiện ích mở rộng trình duyệt 
-          (<em>Google Chrome Extension</em>) và ứng dụng di động (<em>Android Mobile App</em>), giúp người dùng giải nhanh 
-          và tra cứu lời giải các câu hỏi trắc nghiệm thông qua mô hình trí tuệ nhân tạo (AI).
-        </p>
-        <p>
-          Khi người dùng chủ động kích hoạt tính năng giải đề (bấm phím tắt <code>Alt + Q</code> trên máy tính hoặc chạm nút nổi "QP" trên điện thoại), 
-          QuizPeek sẽ chụp phần màn hình chứa câu hỏi và gửi qua kênh kết nối bảo mật HTTPS về máy chủ QuizPeek để phân tích và tạo lời giải chính xác thông qua mô hình Google Gemini.
-        </p>
-        <div class="callout-box info">
-          <div class="callout-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-          </div>
-          <div class="callout-content">
-            <strong>Cam kết cốt lõi</strong>
-            QuizPeek chỉ thu thập và xử lý đúng những dữ liệu tối thiểu cần thiết để xác thực tài khoản, kiểm tra số dư lượt dùng (credits) và đưa ra gợi ý đáp án. QuizPeek <strong>không bao giờ bán dữ liệu</strong> và không sử dụng dữ liệu cho mục đích quảng cáo thương mại.
-          </div>
-        </div>
-      </section>
+    <p><strong>Payment and transaction information</strong></p>
+    <ul>
+      <li>Payment order code</li>
+      <li>Payment amount</li>
+      <li>Payment status</li>
+      <li>Transaction reference or related payment information received for verification, when provided by the payment provider</li>
+      <li>Payment and transaction timestamps</li>
+    </ul>
 
-      <!-- Section 2 -->
-      <section class="article-section" id="sec-2">
-        <h2><span class="section-number">02</span> Thông tin chúng tôi xử lý (Information We Process)</h2>
-        <p>Tùy thuộc vào tương tác của bạn với QuizPeek, chúng tôi xử lý các nhóm thông tin sau:</p>
+    <p>
+      QuizPeek uses this information to verify credit purchases and update
+      the user's QuizPeek credit balance. QuizPeek does not request or
+      store users' credit card numbers, card security codes, online banking
+      passwords, or other banking credentials through the QuizPeek extension.
+    </p>
 
-        <h3>A. Thông tin tài khoản Google (Google Account Information)</h3>
-        <p>Khi bạn đăng nhập vào QuizPeek bằng Google Sign-In, chúng tôi tiếp nhận các thông tin cơ bản từ hồ sơ Google:</p>
-        <ul>
-          <li><strong>Mã định danh tài khoản Google (Google Subject ID):</strong> Dùng để liên kết và định danh duy nhất người dùng.</li>
-          <li><strong>Địa chỉ Email:</strong> Dùng để quản lý tài khoản, đồng bộ credits và làm kênh liên hệ hỗ trợ.</li>
-          <li><strong>Họ và tên hiển thị:</strong> Hiển thị trong giao diện cá nhân hóa của người dùng.</li>
-          <li><strong>Ảnh đại diện (Avatar URL):</strong> Hiển thị trên thanh trạng thái tài khoản.</li>
-        </ul>
+    <h2>3. How we use information</h2>
+    <p>QuizPeek uses processed information for the following purposes:</p>
+    <ul>
+      <li>Authenticate users with Google</li>
+      <li>Create and manage QuizPeek accounts</li>
+      <li>Process quiz screenshots and generate answers</li>
+      <li>Track credits and plan usage</li>
+      <li>Provide account and usage information to the user</li>
+      <li>Monitor service usage and prevent abuse</li>
+      <li>Maintain and secure the QuizPeek service</li>
+    </ul>
 
-        <h3>B. Thông tin xác thực & Phiên làm việc (Authentication Information)</h3>
-        <ul>
-          <li><strong>Google OAuth Token:</strong> Tiếp nhận trong quá trình đăng nhập để xác minh tính hợp lệ với máy chủ Google.</li>
-          <li><strong>QuizPeek Session Token (JWT):</strong> Token ký điện tử dùng để duy trì phiên đăng nhập và phân quyền gọi API an toàn.</li>
-        </ul>
+    <h2>4. How screenshots are processed</h2>
+    <p>
+      In the browser extension, a screenshot of the visible browser tab is
+      captured only when the user activates the answer feature. In Android,
+      after granting Android's screen-capture permission, the user starts a
+      capture by tapping the floating QP button. The Android capture can
+      include the entire visible display, including content outside the
+      QuizPeek app.
+    </p>
 
-        <h3>C. Ảnh chụp màn hình do người dùng chủ động gửi (User-Submitted Screenshots)</h3>
-        <p>
-          Khi bạn chủ động kích hoạt thao tác "Giải đáp án", QuizPeek sẽ chụp ảnh màn hình hiện tại. Ảnh chụp này có thể chứa nội dung câu hỏi, 
-          hình vẽ minh họa, các phương án lựa chọn (A, B, C, D) đang hiển thị trên màn hình của bạn.
-        </p>
+    <p>
+      The screenshot is sent to the QuizPeek backend over HTTPS to process
+      the user's request. The backend may send it to Google Gemini for AI
+      analysis. This transfer is necessary to generate the requested answer.
+    </p>
 
-        <h3>D. Bản ghi tài khoản và lịch sử sử dụng dịch vụ (Account & Usage Records)</h3>
-        <ul>
-          <li>Gói dịch vụ (Plan) và trạng thái tài khoản (Active/Banned/Admin).</li>
-          <li>Số dư credits và lịch sử giao dịch credits (nạp thêm hoặc tiêu thụ).</li>
-          <li>Số lượt yêu cầu AI, token sử dụng (Input / Output tokens), mô hình AI áp dụng (Nhanh hoặc Chính xác).</li>
-          <li>Kết quả đáp án trả về và dấu thời gian (timestamps) của yêu cầu.</li>
-        </ul>
-      </section>
+    <p>
+      QuizPeek does not use an Android AccessibilityService and does not
+      intentionally capture the screen automatically in the background.
+      Users should not activate capture on screens containing sensitive
+      information they do not want processed.
+    </p>
 
-      <!-- Section 3 -->
-      <section class="article-section" id="sec-3">
-        <h2><span class="section-number">03</span> Bảng minh bạch dữ liệu (Data Transparency Summary)</h2>
-        <p>Bảng tóm tắt đối chiếu chi tiết theo tiêu chuẩn <strong>Google Play Data Safety</strong> và <strong>Chrome Web Store Policies</strong>:</p>
+    <p>
+      QuizPeek does not store screenshots in its database as persistent
+      user records. Screenshots are processed temporarily during the
+      request and are not intentionally retained as permanent files.
+    </p>
 
-        <div class="table-responsive">
-          <table class="data-table">
-            <thead>
-              <tr>
-                <th>Loại dữ liệu</th>
-                <th>Mục đích sử dụng</th>
-                <th>Lưu trữ CSDL?</th>
-                <th>Chia sẻ bên thứ ba?</th>
-                <th>Quyền xóa của bạn</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Hồ sơ Google</strong><br><small>Email, Tên, Google ID</small></td>
-                <td>Xác thực đăng nhập & quản lý tài khoản</td>
-                <td><span class="badge-tag yes">Có lưu trữ</span></td>
-                <td><span class="badge-tag no">Không chia sẻ</span></td>
-                <td>Xóa vĩnh viễn khi yêu cầu</td>
-              </tr>
-              <tr>
-                <td><strong>Ảnh chụp màn hình</strong><br><small>Chứa đề bài trắc nghiệm</small></td>
-                <td>Chuyển giao cho AI phân tích đáp án</td>
-                <td><span class="badge-tag no">Không lưu trữ</span><br><small>Chỉ qua RAM tạm thời</small></td>
-                <td>Google Gemini<br><small>(Chỉ để suy luận đáp án)</small></td>
-                <td>Tự động giải phóng ngay lập tức</td>
-              </tr>
-              <tr>
-                <td><strong>Số dư & Lịch sử Credits</strong><br><small>Giao dịch nạp & sử dụng</small></td>
-                <td>Đối soát chi phí & duy trì dịch vụ</td>
-                <td><span class="badge-tag yes">Có lưu trữ</span></td>
-                <td><span class="badge-tag no">Không chia sẻ</span></td>
-                <td>Xóa khi xóa tài khoản</td>
-              </tr>
-              <tr>
-                <td><strong>Đáp án đã giải</strong><br><small>Gợi ý A, B, C, D</small></td>
-                <td>Bộ nhớ đệm (Cache) giảm tải AI</td>
-                <td><span class="badge-tag temp">Tạm thời</span><br><small>Cache ngắn hạn</small></td>
-                <td><span class="badge-tag no">Không chia sẻ</span></td>
-                <td>Tự hủy theo chu kỳ</td>
-              </tr>
-              <tr>
-                <td><strong>Lịch sử duyệt web</strong><br><small>Browsing history</small></td>
-                <td><em>Không áp dụng</em></td>
-                <td><span class="badge-tag no">Tuyệt đối không</span></td>
-                <td><span class="badge-tag no">Tuyệt đối không</span></td>
-                <td>Không bao giờ thu thập</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
+    <p>
+      QuizPeek may temporarily keep the generated answer in server memory
+      for a short period to reduce duplicate AI requests. This temporary
+      cache contains the generated answer, not the original screenshot.
+    </p>
 
-      <!-- Section 4 -->
-      <section class="article-section" id="sec-4">
-        <h2><span class="section-number">04</span> Mục đích sử dụng dữ liệu (How We Use Information)</h2>
-        <p>QuizPeek sử dụng các thông tin được xử lý cho những mục đích hợp pháp duy nhất sau đây:</p>
-        <ul>
-          <li>Xác thực danh tính người dùng thông qua dịch vụ an toàn Google OAuth.</li>
-          <li>Khởi tạo, kích hoạt và quản lý tài khoản người dùng QuizPeek.</li>
-          <li>Xử lý ảnh câu hỏi và tạo gợi ý đáp án AI tương ứng.</li>
-          <li>Theo dõi hạn mức credits, quản lý gói cước và cung cấp thông tin tài khoản cho người dùng.</li>
-          <li>Giám sát lưu lượng hệ thống nhằm ngăn ngừa tấn công từ chối dịch vụ (DDoS) hoặc hành vi lạm dụng gian lận.</li>
-          <li>Đảm bảo tính ổn định, độ tin cậy và sự an toàn của toàn bộ hạ tầng QuizPeek.</li>
-        </ul>
-      </section>
+    <h2>5. Data storage</h2>
+    <p>
+      QuizPeek stores account and service information in its backend
+      database. This may include Google account identifiers, email,
+      profile information, plan, credits, credit transactions, usage
+      statistics, and generated answers.
+    </p>
 
-      <!-- Section 5 -->
-      <section class="article-section" id="sec-5">
-        <h2><span class="section-number">05</span> Quy trình xử lý ảnh chụp màn hình & AI (Screenshots Processing)</h2>
-        <p>Chúng tôi đặc biệt chú trọng bảo vệ quyền riêng tư đối với ảnh màn hình người dùng:</p>
-        <ol>
-          <li><strong>Khởi tạo có chủ đích:</strong> Ảnh màn hình chỉ được chụp khi bạn thực hiện hành động chủ động (bấm nút hoặc phím tắt). QuizPeek hoàn toàn <strong>không bao giờ tự động chụp màn hình nền</strong>.</li>
-          <li><strong>Truyền tải mã hóa:</strong> Dữ liệu ảnh được nén dạng Base64 và truyền tải tức thời qua kết nối bảo mật mã hóa HTTPS về máy chủ QuizPeek.</li>
-          <li><strong>Suy luận AI không lưu trữ:</strong> Máy chủ chuyển tiếp ảnh tới Google Gemini API để phân tích câu hỏi và trích xuất đáp án. <strong>QuizPeek không lưu ảnh chụp màn hình vào cơ sở dữ liệu vĩnh viễn</strong>. Sau khi hoàn tất phiên phản hồi, buffer bộ nhớ chứa ảnh được giải phóng hoàn toàn.</li>
-          <li><strong>Bộ nhớ đệm đáp án:</strong> Để tối ưu chi phí và tránh gọi trùng lặp cùng một câu hỏi, máy chủ có thể lưu tạm đáp án dưới dạng chữ trong RAM trong thời gian ngắn. Bộ nhớ đệm này hoàn toàn không chứa ảnh gốc.</li>
-        </ol>
-      </section>
+    <p>
+      QuizPeek does not intentionally store users' screenshots in the
+      database.
+    </p>
 
-      <!-- Section 6 -->
-      <section class="article-section" id="sec-6">
-        <h2><span class="section-number">06</span> Cơ chế lưu trữ dữ liệu (Data Storage)</h2>
-        <p>
-          Hệ thống QuizPeek lưu trữ thông tin tài khoản và nhật ký dịch vụ trong cơ sở dữ liệu đám mây PostgreSQL bảo mật. 
-          Các thông tin này bao gồm: mã định danh Google, email, ảnh đại diện, số credits, lịch sử nạp credits và số token tiêu thụ.
-        </p>
-        <p>
-          Chúng tôi tái khẳng định: <strong>Không có bất kỳ tệp ảnh chụp màn hình nào của người dùng bị lưu giữ vĩnh viễn trong cơ sở dữ liệu</strong>.
-        </p>
-      </section>
+    <h2>6. Third-party services</h2>
 
-      <!-- Section 7 -->
-      <section class="article-section" id="sec-7">
-        <h2><span class="section-number">07</span> Dịch vụ bên thứ ba (Third-Party Services)</h2>
-        <p>QuizPeek tích hợp với các nhà cung cấp dịch vụ hạ tầng uy tín trên thế giới:</p>
-        <ul>
-          <li><strong>Google LLC:</strong> Cung cấp cơ chế đăng nhập bảo mật (Google OAuth 2.0) và mô hình ngôn ngữ lớn (Google Gemini AI) để phân tích câu hỏi. Chính sách quyền riêng tư của Google áp dụng đối với các dịch vụ này.</li>
-          <li><strong>Hạ tầng đám mây (Cloud Infrastructure & Database):</strong> Máy chủ backend và cơ sở dữ liệu được triển khai trên nền tảng đám mây bảo mật cao, tuân thủ các chứng chỉ an toàn thông tin ISO/IEC 27001 và SOC 2.</li>
-        </ul>
-      </section>
+    <p><strong>Google</strong></p>
+    <p>
+      Google services are used for authentication and Google Gemini may
+      be used to analyze screenshots and generate quiz answers.
+      Google's own terms and privacy policies may also apply to its
+      processing of information.
+    </p>
 
-      <!-- Section 8 -->
-      <section class="article-section" id="sec-8">
-        <h2><span class="section-number">08</span> Cam kết không chia sẻ dữ liệu (Data Sharing Policy)</h2>
-        <div class="callout-box success">
-          <div class="callout-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
-          </div>
-          <div class="callout-content">
-            <strong>Nguyên tắc Không thỏa hiệp</strong>
-            QuizPeek cam kết: <strong>KHÔNG bán, KHÔNG cho thuê, KHÔNG thương mại hóa và KHÔNG trao đổi dữ liệu cá nhân của người dùng</strong> với bất kỳ bên thứ ba nào vì mục đích tiếp thị hoặc quảng cáo.
-          </div>
-        </div>
-        <p>
-          Dữ liệu chỉ được chuyển giao trong phạm vi kỹ thuật cần thiết cho việc vận hành dịch vụ (như gửi ảnh sang Google Gemini để suy luận câu trả lời) 
-          hoặc khi có yêu cầu bắt buộc từ cơ quan pháp luật có thẩm quyền theo quy định của pháp luật hiện hành.
-        </p>
-      </section>
+    <p><strong>SePay</strong></p>
+    <p>
+      SePay may be used to receive payment notifications and transaction
+      information for verifying credit purchases. QuizPeek uses the payment
+      information provided through this service only for payment verification,
+      credit allocation, transaction records, and related service security.
+    </p>
 
-      <!-- Section 9 -->
-      <section class="article-section" id="sec-9">
-        <h2><span class="section-number">09</span> Hoạt động duyệt web & Quyền màn hình (Browsing & Screen Activity)</h2>
-        <p>
-          QuizPeek <strong>hoàn toàn không thu thập, không theo dõi và không lưu trữ lịch sử duyệt web</strong> của người dùng.
-        </p>
-        <ul>
-          <li>Trên <strong>Chrome Extension</strong>: Quyền <code>activeTab</code> chỉ cấp quyền truy cập vào tab hiện hành tại khoảnh khắc người dùng kích hoạt chụp màn hình.</li>
-          <li>Trên <strong>Android App</strong>: Quyền <code>MediaProjection</code> (Chụp màn hình) và <code>SYSTEM_ALERT_WINDOW</code> (Nút nổi) được kiểm soát nghiêm ngặt. Người dùng luôn được thông báo rõ ràng trước khi cấp quyền và có thể tắt nút nổi bất cứ lúc nào.</li>
-        </ul>
-      </section>
+    <p><strong>Hosting and database providers</strong></p>
+    <p>
+      QuizPeek uses third-party infrastructure providers to host the
+      backend service and database. These providers process information
+      only as necessary to provide the infrastructure used by QuizPeek.
+    </p>
 
-      <!-- Section 10 -->
-      <section class="article-section" id="sec-10">
-        <h2><span class="section-number">10</span> Lưu trữ cục bộ trên thiết bị (Local Device Storage)</h2>
-        <p>QuizPeek lưu trữ một số cài đặt cần thiết cục bộ trên máy của bạn:</p>
-        <ul>
-          <li><strong>Trên Extension:</strong> Sử dụng <code>chrome.storage.local</code> để lưu token xác thực JWT, tùy chọn chế độ trả lời (Nhanh/Chính xác) và cài đặt Auto Wayground.</li>
-          <li><strong>Trên Android:</strong> Sử dụng Jetpack DataStore đã được loại trừ khỏi tính năng sao lưu đám mây tự động (Cloud Backup Exclusion) để đảm bảo token không bị rò rỉ khi đồng bộ máy mới.</li>
-        </ul>
-        <p>Khi người dùng đăng xuất, toàn bộ token xác thực trên bộ nhớ cục bộ sẽ bị hủy ngay lập tức.</p>
-      </section>
+    <h2>7. Data sharing</h2>
+    <p>
+      QuizPeek does not sell, rent, or trade user data.
+    </p>
 
-      <!-- Section 11 -->
-      <section class="article-section" id="sec-11">
-        <h2><span class="section-number">11</span> Thời hạn lưu giữ dữ liệu (Data Retention)</h2>
-        <p>
-          Thông tin tài khoản và lịch sử giao dịch credits được lưu giữ trong suốt thời gian bạn duy trì tài khoản QuizPeek. 
-          Trong trường hợp bạn yêu cầu xóa tài khoản, toàn bộ dữ liệu định danh cá nhân sẽ được xóa vĩnh viễn theo quy trình tại Mục 13.
-        </p>
-        <p>
-          Ảnh chụp màn hình không phải là dữ liệu lưu trữ vĩnh viễn và bị hủy ngay lập tức sau khi gửi kết quả AI.
-        </p>
-      </section>
+    <p>
+      QuizPeek does not share user data with third parties for advertising
+      or unrelated marketing purposes.
+    </p>
 
-      <!-- Section 12 -->
-      <section class="article-section" id="sec-12">
-        <h2><span class="section-number">12</span> Các biện pháp an toàn bảo mật (Security Safeguards)</h2>
-        <p>Chúng tôi áp dụng các biện pháp kỹ thuật và tổ chức nghiêm ngặt nhằm bảo vệ dữ liệu:</p>
-        <ul>
-          <li>Mã hóa toàn bộ đường truyền dữ liệu qua giao thức HTTPS chuẩn TLS 1.3.</li>
-          <li>Xác thực từng yêu cầu API bằng JSON Web Token (JWT) được ký mật mã chuẩn thuật toán HS256.</li>
-          <li>Khóa bí mật của bên thứ ba (Google Client Secret, Gemini API Key) được lưu giữ an toàn trên biến môi trường máy chủ và không bao giờ lộ ra phía client.</li>
-          <li>Phân quyền chặt chẽ giữa tài khoản người dùng thông thường và tài khoản quản trị hệ thống.</li>
-        </ul>
-      </section>
+    <p>
+      Information may be transmitted to service providers required to
+      operate QuizPeek, including Google services, AI processing services,
+      SePay for payment verification, hosting infrastructure, and database
+      infrastructure. Payment information is used only for purposes related
+      to the user's purchase and QuizPeek account.
+    </p>
 
-      <!-- Section 13 -->
-      <section class="article-section" id="sec-13">
-        <h2><span class="section-number">13</span> Quyền của người dùng & Hướng dẫn xóa tài khoản (User Rights & Deletion)</h2>
-        <p>Bạn có toàn quyền kiểm soát dữ liệu cá nhân của mình:</p>
-        <ul>
-          <li><strong>Quyền truy cập & kiểm tra:</strong> Xem thông tin tài khoản, số dư credits và lịch sử sử dụng trực tiếp trên giao diện ứng dụng.</li>
-          <li><strong>Quyền đăng xuất:</strong> Đăng xuất để xóa sạch token phiên làm việc trên thiết bị.</li>
-          <li><strong>Quyền yêu cầu xóa vĩnh viễn tài khoản & dữ liệu:</strong> Tuân thủ chính sách của Google Play Store và các quy định bảo vệ dữ liệu quốc tế, bạn có quyền yêu cầu xóa bỏ hoàn toàn tài khoản và toàn bộ dữ liệu cá nhân liên quan.</li>
-        </ul>
+    <h2>8. Browsing activity</h2>
+    <p>
+      QuizPeek does not intentionally collect or store the user's browsing
+      history.
+    </p>
 
-        <div class="callout-box warning">
-          <div class="callout-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          </div>
-          <div class="callout-content">
-            <strong>Gửi yêu cầu trực tiếp đến hệ thống quản trị QuizPeek</strong>
-            Biểu mẫu trên trang chuyên biệt sẽ chuyển yêu cầu vào hệ thống backend để admin QuizPeek xem xét. Người dùng đã đăng nhập Android cũng có thể gửi yêu cầu ngay trong ứng dụng. Gửi yêu cầu không tự động xóa tài khoản; admin phải xác minh quyền sở hữu và thực hiện xử lý thực tế trước khi đánh dấu hoàn tất.
-            <br>
-            <a href="delete-account.html" style="font-weight: 750; text-decoration: underline; display: inline-block; margin-top: 6px;">
-              👉 Mở biểu mẫu yêu cầu xóa tài khoản & dữ liệu
-            </a>
-          </div>
-        </div>
-      </section>
+    <p>
+      The extension accesses visible page content only when required by
+      features activated by the user, such as screenshot capture or
+      Auto Wayground functionality. Auto Wayground may process visible
+      quiz content according to the settings enabled by the user.
+    </p>
 
-      <!-- Section 14 -->
-      <section class="article-section" id="sec-14">
-        <h2><span class="section-number">14</span> Quyền riêng tư của trẻ em (Children's Privacy)</h2>
-        <p>
-          Dịch vụ QuizPeek không hướng đến trẻ em dưới 13 tuổi (hoặc độ tuổi tương ứng theo quy định pháp lý tại khu vực của bạn). 
-          Chúng tôi không chủ ý thu thập dữ liệu cá nhân từ trẻ em. Nếu bạn là phụ huynh hoặc người giám hộ và phát hiện con em mình đã cung cấp dữ liệu cá nhân cho QuizPeek mà không có sự đồng ý, vui lòng liên hệ ngay với chúng tôi để chúng tôi tiến hành xóa dữ liệu đó.
-        </p>
-      </section>
+    <h2>9. Local extension storage</h2>
+    <p>
+      QuizPeek may store information locally in the browser, including:
+    </p>
 
-      <!-- Section 15 -->
-      <section class="article-section" id="sec-15">
-        <h2><span class="section-number">15</span> Thay đổi chính sách & Thông tin liên hệ (Changes & Contact)</h2>
-        <p>
-          Chúng tôi có thể cập nhật Chính sách Quyền riêng tư này theo thời gian để phản ánh các thay đổi về tính năng hoặc quy định pháp luật. 
-          Khi có thay đổi, ngày "Cập nhật gần nhất" ở đầu trang sẽ được điều chỉnh tương ứng.
-        </p>
-        <p>Nếu bạn có bất kỳ thắc mắc, phản hồi hoặc yêu cầu pháp lý nào liên quan đến quyền riêng tư, vui lòng liên hệ với nhà phát triển:</p>
+    <ul>
+      <li>Extension settings</li>
+      <li>Auto Wayground settings</li>
+      <li>QuizPeek authentication token</li>
+      <li>Google authentication token</li>
+      <li>Cached account information</li>
+    </ul>
 
-        <div class="callout-box info" style="margin-top: 16px;">
-          <div class="callout-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </div>
-          <div class="callout-content">
-            <strong>Thông tin liên hệ chính thức</strong>
-            • Nhà phát triển: <strong>baonhq1406 (Nguyễn Hồng Quốc Bảo)</strong><br>
-            • Email hỗ trợ: <a href="mailto:baonhq.se@gmail.com">baonhq.se@gmail.com</a><br>
-            • Đơn vị chủ quản: Đại học Công nghệ Thông tin và Truyền thông Việt - Hàn (VKU)<br>
-            • Kênh hỗ trợ bổ sung: Mục hỗ trợ nhà phát triển trên trang Chrome Web Store và Google Play Store.
-          </div>
-        </div>
-      </section>
+    <p>
+      The extension uses local browser storage to maintain extension
+      settings, sign-in state, and account information between browser
+      sessions. The Android app stores its QuizPeek session token in private
+      app DataStore storage. That token storage is excluded from cloud
+      backup and device transfer.
+    </p>
 
-    </article>
+    <h2>10. Data retention</h2>
+    <p>
+      Account and service records may be retained while the user maintains
+      a QuizPeek account or while they are required for service operation,
+      security, accounting, abuse prevention, or legal obligations.
+    </p>
+
+    <p>
+      Screenshots are not intentionally stored as permanent database
+      records by QuizPeek and are processed temporarily to provide the
+      requested AI functionality.
+    </p>
+
+    <h2>11. Security</h2>
+    <p>
+      QuizPeek uses reasonable technical measures to protect information,
+      including authenticated API requests, HTTPS communication, server-side
+      storage of sensitive service credentials, and access controls for
+      administrative functionality.
+    </p>
+
+    <p>
+      However, no internet transmission or storage system can be guaranteed
+      to be completely secure.
+    </p>
+
+    <h2>12. User choices and account access</h2>
+    <p>
+      Users may sign out of QuizPeek through the extension. Signing out
+      removes locally stored authentication information from the extension.
+    </p>
+
+    <p>
+      Users may also choose not to use screenshot-based AI features.
+      Without submitting a screenshot, QuizPeek does not process that
+      screenshot for AI answering.
+    </p>
+
+    <h2>12A. Account and data deletion</h2>
+    <p>
+      Users may request deletion of their QuizPeek account and associated
+      personal data by following the instructions on the
+      <a href="./delete-account.html">Account and Data Deletion page</a>.
+      The current backend does not provide automatic self-service deletion,
+      so requests are reviewed and processed manually after account ownership
+      is verified. Submitting a request does not mean deletion has already
+      completed. Some records may be retained where required for legal,
+      security, fraud-prevention, or accounting obligations.
+    </p>
+
+    <h2>13. Children's privacy</h2>
+    <p>
+      QuizPeek is not specifically directed at children and does not
+      intentionally collect personal information from children as a
+      separate category.
+    </p>
+
+    <h2>14. Changes to this policy</h2>
+    <p>
+      QuizPeek may update this Privacy Policy when its features, services,
+      or data practices change. The updated version will be published on
+      this page with a new "Last updated" date.
+    </p>
+
+    <h2>15. Contact</h2>
+    <p>
+      For privacy questions, data requests, or concerns about QuizPeek's
+      privacy practices, email
+      <a href="mailto:baonhq.se@gmail.com">baonhq.se@gmail.com</a>.
+    </p>
   </main>
-
-  <!-- ── Footer ── -->
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-top">
-        <div class="brand-link">
-          <div class="brand-logo-wrap" style="width: 28px; height: 28px;">
-            <img src="assets/logo.png" alt="QuizPeek Logo" class="brand-logo-img" style="width: 18px; height: 18px;">
-          </div>
-          <span class="brand-name" style="font-size: 16px;">QuizPeek</span>
-        </div>
-        <div class="footer-links">
-          <a href="index.html">Chính sách Quyền riêng tư</a>
-          <a href="delete-account.html">Yêu cầu Xóa tài khoản</a>
-          <a href="mailto:baonhq.se@gmail.com">Email Hỗ trợ</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© 2026 QuizPeek by baonhq1406. Mọi quyền được bảo lưu.</span>
-        <span>Tuân thủ Google Play & Chrome Web Store Policies</span>
-      </div>
-    </div>
-  </footer>
-
-  <!-- ── Client Scripts ── -->
-  <script>
-    // Theme toggle logic with localStorage
-    const themeToggleBtn = document.getElementById("themeToggle");
-    const iconMoon = document.getElementById("iconMoon");
-    const iconSun = document.getElementById("iconSun");
-    const htmlEl = document.documentElement;
-
-    function applyTheme(theme) {
-      htmlEl.setAttribute("data-theme", theme);
-      if (theme === "light") {
-        iconMoon.style.display = "none";
-        iconSun.style.display = "block";
-      } else {
-        iconMoon.style.display = "block";
-        iconSun.style.display = "none";
-      }
-      localStorage.setItem("quizpeek_theme", theme);
-    }
-
-    const savedTheme = localStorage.getItem("quizpeek_theme") || "dark";
-    applyTheme(savedTheme);
-
-    themeToggleBtn.addEventListener("click", () => {
-      const current = htmlEl.getAttribute("data-theme");
-      applyTheme(current === "light" ? "dark" : "light");
-    });
-
-    // Scrollspy for Table of Contents
-    const sections = document.querySelectorAll(".article-section");
-    const tocLinks = document.querySelectorAll(".toc-link");
-
-    window.addEventListener("scroll", () => {
-      let currentSectionId = "";
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 120;
-        if (window.scrollY >= sectionTop) {
-          currentSectionId = section.getAttribute("id");
-        }
-      });
-
-      if (currentSectionId) {
-        tocLinks.forEach(link => {
-          link.classList.toggle("is-active", link.getAttribute("href") === `#${currentSectionId}`);
-        });
-      }
-    }, { passive: true });
-  </script>
 </body>
 </html>
