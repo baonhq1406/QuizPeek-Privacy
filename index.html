@@ -278,14 +278,13 @@
 
     <p><strong>Render, PostgreSQL, and GitHub Pages</strong></p>
     <p>
-      Render hosts the QuizPeek backend API. The backend uses a PostgreSQL
-      database configured through the deployment's DATABASE_URL setting.
-      The operator should confirm the actual database hosting provider in the
-      deployment configuration before relying on this policy as a complete
-      list of providers. The public privacy and deletion pages are hosted on
-      GitHub Pages. These infrastructure providers may process technical
-      connection and service logs as part of providing and securing their
-      services.
+      Render hosts the QuizPeek backend API. QuizPeek uses a PostgreSQL
+      database configured for the service; the database may be hosted by a
+      provider separate from Render. The public privacy and deletion pages
+      are hosted on GitHub Pages. These infrastructure providers may process
+      technical connection and service logs as part of providing and securing
+      their services. The applicable provider terms and privacy information
+      also govern infrastructure-level processing.
     </p>
 
     <h2>7. Data sharing</h2>
